@@ -125,10 +125,10 @@ public class Main {
         }
         System.out.println("\n\n");
 
+        System.out.println("Example #8: Removing outdated books");
+        System.out.println("------------------------------------");
+        store.removeOutdatedBooks(admin);
 
-
-
-
-
+        System.out.println("\n\n");
     }
 }

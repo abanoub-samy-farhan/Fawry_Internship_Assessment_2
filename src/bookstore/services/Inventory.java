@@ -90,11 +90,17 @@ public class Inventory {
 
     public Map<String, Book> removeOutdated(){
         Map<String, Book> outdated = new HashMap<>();
+        int current_year = LocalDate.now().getYear();
         for (Book book : this.books.values()) {
-            if (book.getPublishDate().getYear() + expire_threshold <= LocalDate.now().getYear()) {
+            LocalDate date = book.getPublishDate();
+            int expected_expirey = date.getYear() + expire_threshold;
+            if (expected_expirey <= current_year) {
                 outdated.put(book.getIsbn(), book);
-                removeBook(book.getIsbn());
             }
+        }
+
+        for (String  isbn : outdated.keySet()) {
+            removeBook(isbn);
         }
         return outdated;
     }
