@@ -178,12 +178,12 @@ Output:
 Example #8: Removing outdated books
 ------------------------------------
 There are 7 outdated books removed
-	- Design Patterns (EBK2005).azw3
-	- The Pragmatic Programmer (EBK2003).mobi
-	- To Kill a Mockingbird (978-0-06-112008-4)
-	- Clean Code (EBK2001).pdf
-	- The Great Gatsby (978-3-598-21500-1)
-	- Brave New World (978-0-452-28423-4)
-	- 1984 (978-1-234-56789-2)
+	- Design Patterns (EBK2005).azw3 > 1994-11-05
+	- The Pragmatic Programmer (EBK2003).mobi > 1999-10-30
+	- To Kill a Mockingbird (978-0-06-112008-4) > 1998-02-17
+	- Clean Code (EBK2001).pdf > 1990-06-10
+	- The Great Gatsby (978-3-598-21500-1) > 2000-07-30
+	- Brave New World (978-0-452-28423-4) > 1988-11-05
+	- 1984 (978-1-234-56789-2) > 1980-04-20
 ```
 

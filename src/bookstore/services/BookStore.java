@@ -76,7 +76,7 @@ public class BookStore {
             }
             System.out.println("There are " + outdated.size() + " outdated books removed");
             for (Book book : outdated.values()){
-                System.out.println("\t- " + book.toString());
+                System.out.println("\t- " + book.toString() + " > " + book.getPublishDate().toString());
             }
         }
         else  {
