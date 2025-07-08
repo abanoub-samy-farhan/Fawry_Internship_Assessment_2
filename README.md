@@ -187,3 +187,6 @@ There are 7 outdated books removed
 	- 1984 (978-1-234-56789-2) > 1980-04-20
 ```
 
+# Screenshot
+
+![Working App Screenshot](/working_app_screenshot.png)
