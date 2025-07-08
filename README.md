@@ -5,10 +5,8 @@ This is a simple book store application built with Java, illustrating the core O
 # Table of Contents
 1. [Project Structure](#project-structure)
 1. [Models](#models)
-2. [Design Choices](#design-choices)
 3. [Examples](#examples)
 4. [Screenshots](#screenshots)
-5. [Installation and Usage](#installation-and-usage)
 
 # Project Structure
 ```
@@ -48,8 +46,6 @@ The models in this project represent the core entities of the bookstore applicat
 - `ShippingService`: A class that handles the shipping of books to customers.
 - `MailService`: A class that handles email notifications for customers.
 
-# Design Choices
-pass for now
 
 # Examples
 The following examples illustrate how the bookstore application operates against different scenarios:
@@ -187,6 +183,6 @@ There are 7 outdated books removed
 	- 1984 (978-1-234-56789-2) > 1980-04-20
 ```
 
-# Screenshot
+# Screenshots
 
 ![Working App Screenshot](/working_app_screenshot.png)
