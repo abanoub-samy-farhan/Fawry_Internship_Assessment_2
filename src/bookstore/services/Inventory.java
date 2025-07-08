@@ -27,7 +27,7 @@ public class Inventory {
     }
 
     public Book getBook(String isbn) {
-        if (this.stock.containsKey(isbn)) {
+        if (this.books.containsKey(isbn)) {
             return this.books.get(isbn);
         }
         return null;

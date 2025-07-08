@@ -85,6 +85,10 @@ public class BookStore {
     }
 
     public int bookStock(String isbn){
-        return inventory.getBookAmount(isbn);
+        int amount = inventory.getBookAmount(isbn);
+        if (amount < 0){
+            System.out.println("This book is out of stock or not existed");
+        }
+        return amount;
     }
 }

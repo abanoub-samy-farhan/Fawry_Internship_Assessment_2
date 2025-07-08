@@ -61,6 +61,7 @@ public class Main {
         store.addBookToStore(admin, dbook3, 1);
 
         System.out.println("Inventory Loaded");
+        System.out.println("\n\n");
 
         // Examples
         // Example 1: Buying a book successfully
@@ -95,6 +96,38 @@ public class Main {
         paidAmount = store.buyBook(customer, "978-1-56619-909-4", 2);
 
         System.out.println("\n\n");
+
+        // Example 4: Buying Successfully and Ebook
+        System.out.println("Example #5: Buying an Ebook successfully");
+        System.out.println("-------------------------------------");
+        paidAmount = store.buyBook(customer, "EBK2002", 1824231); // quantity ignored in Ebook transactions
+        if (paidAmount > 0) {
+            System.out.println("Total Price: " +  paidAmount);
+        }
+
+        System.out.println("\n\n");
+
+        // Example 6: Trying to buy a book not for sale
+        System.out.println("Example #6: Buying a book not for sale");
+        System.out.println("-------------------------------------");
+        paidAmount = store.buyBook(customer, "DEMO9313", 1); // quantity ignored in Ebook transactions
+
+        System.out.println("\n\n");
+
+
+        System.out.println("Example #7: Removing a book");
+        System.out.println("-------------------------------------");
+        store.removeBookFromStore(admin, "978-0-123-45678-1");
+        // trying to find this book
+        int amount = store.bookStock("978-0-123-45678-1"); // -1 because it's not found
+        if (amount < 0) {
+            System.out.println("Amount " +  amount);
+        }
+        System.out.println("\n\n");
+
+
+
+
 
 
     }
