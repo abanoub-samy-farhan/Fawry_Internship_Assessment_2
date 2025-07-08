@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class PaperBook extends Book implements Sellable {
     private float price;
-    PaperBook(String isbn, String title, float price,  LocalDate publishDate) {
+    public PaperBook(String isbn, String title, float price, LocalDate publishDate) {
         super(isbn, title, publishDate);
         this.price = price;
     }

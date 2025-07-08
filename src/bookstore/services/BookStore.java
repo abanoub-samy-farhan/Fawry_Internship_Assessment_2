@@ -7,7 +7,7 @@ import java.util.Map;
 public class BookStore {
     private final Inventory inventory;
 
-    BookStore() {
+    public BookStore() {
         inventory = new Inventory();
     }
 
@@ -16,6 +16,7 @@ public class BookStore {
         Book book = inventory.getBook(isbn);
         if (book == null) {
             System.out.println("Book doesn't exist");
+            return -1;
         }
 
         if (book instanceof Sellable){
@@ -36,8 +37,8 @@ public class BookStore {
                     return -1;
                 }
                 // shipping service works here
-                ShippingService shipping = new ShippingService();
                 System.out.println("Transaction Done Successfully\n");
+                ShippingService shipping = new ShippingService();
                 shipping.shipBook(book, user.getAddress(), quantity);
                 return  ((Sellable) book).getPrice() * quantity;
             }
@@ -81,5 +82,9 @@ public class BookStore {
         else  {
             System.out.println("You are not admin");
         }
+    }
+
+    public int bookStock(String isbn){
+        return inventory.getBookAmount(isbn);
     }
 }

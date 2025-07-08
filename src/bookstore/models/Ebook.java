@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Ebook extends Book implements Sellable {
     private final String filetype;
     private float price;
-    Ebook(String isbn, String title, float price, String filetype,  LocalDate publishDate) {
+    public Ebook(String isbn, String title, float price, String filetype,  LocalDate publishDate) {
         super(isbn, title,  publishDate);
         this.filetype = filetype;
         this.price = price;
