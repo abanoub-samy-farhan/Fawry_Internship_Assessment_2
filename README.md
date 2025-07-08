@@ -148,3 +148,42 @@ Example #6: Buying a book not for sale
 -------------------------------------
 This book is not for sale right now
 ```
+
+### Example #7: Removing a book
+```java
+store.removeBookFromStore(admin, "978-0-123-45678-1");
+int amount = store.bookStock("978-0-123-45678-1"); // -1 because it's not found
+if (amount < 0) {
+    System.out.println("Amount " +  amount);
+}
+```
+
+Output:
+```
+Example #7: Removing a book
+-------------------------------------
+This book is out of stock or not existed
+Amount -1
+```
+
+### Example #8: Removing Outdated Books
+```java
+store.removeOutdatedBooks(admin);
+```
+
+This method will remove all books that are older than 25 years from the current date. It will also print the names of the removed books.
+
+Output:
+```
+Example #8: Removing outdated books
+------------------------------------
+There are 7 outdated books removed
+	- Design Patterns (EBK2005).azw3
+	- The Pragmatic Programmer (EBK2003).mobi
+	- To Kill a Mockingbird (978-0-06-112008-4)
+	- Clean Code (EBK2001).pdf
+	- The Great Gatsby (978-3-598-21500-1)
+	- Brave New World (978-0-452-28423-4)
+	- 1984 (978-1-234-56789-2)
+```
+
